@@ -10,6 +10,7 @@ body{
     color: #ffffff;
     background: #181f2a;
     font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -218,6 +219,7 @@ header{
 
 #team{
     padding: 5rem 0;
+    position: relative;
 }
 
 .team-wrapper{
@@ -249,6 +251,7 @@ header{
 .team-info{
     margin-top: 1.4rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .team-info img{

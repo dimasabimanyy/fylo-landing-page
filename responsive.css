@@ -16,14 +16,18 @@
     .features-wrapper, .email-wrapper{
         width: 90%;
     }
-    
+
     .footer-grid{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
 }
 
 @media only screen and (max-width: 650px) {
+
+    #features{
+        padding: 4rem 0;
+    }
 
     .nav-links li{
         margin-left: 1rem;
@@ -49,6 +53,10 @@
         margin-bottom: .8rem;
     }
 
+    #email{
+        padding-top: 2rem;
+    }
+
     #email h1{
         font-size: 1.4rem;
     }
@@ -66,6 +74,23 @@
         margin-bottom: 1rem;
     }
 
+    footer{
+        padding: 10rem 0 1.5rem;
+    }
+
+    .footer-link{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-social-icon ul{
+        justify-content: center;
+    }
+
+    .footer-social-icon li{
+        margin: 0 .5rem;
+    }
+    
+
 }
 
 
@@ -75,6 +100,14 @@
     p, a{
         font-size: 13px;
         line-height: 19px;
+    }
+
+    .team-member{
+        padding: 1rem;
+    }
+
+    #intro{
+        min-height: 500px !important;
     }
 
 }

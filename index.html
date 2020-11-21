@@ -6,6 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
@@ -14,7 +18,7 @@
   
   <!-- Header -->
   <header>
-    <div class="header-wrapper">
+    <div class="header-wrapper container">
       <div class="logo">
         <img src="images/logo.svg" alt="">
       </div>
@@ -38,7 +42,7 @@
           <h2>All your files in one secure location, accessible anywhere.</h2>
           <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
           <a href="/">
-              <button class="btn">
+              <button class="btn btn-intro">
                 Get Started
               </button>
           </a>
@@ -133,11 +137,11 @@
 
     <section id="email">
       <div class="email-wrapper">
-        <h3>Get early access today</h3>
+        <h1>Get early access today</h1>
         <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
-        <form action="">
+        <form action="" class="form-email">
           <input type="text" placeholder="email@example.com">
-          <button class="btn">Get Started For Free</button>
+          <button class="btn btn-email">Get Started For Free</button>
         </form>
       </div>
     </section>
@@ -145,11 +149,62 @@
 
   <footer>
     <div class="footer-wrapper container">
-      <div>planet</div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="footer-logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div>
+            <img src="images/icon-location.svg" alt="location" class="icon-location">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestiae officia distinctio similique pariatur!</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <img src="images/icon-phone.svg" alt="phone">
+            <p>+1-543-123-4567</p>
+          </div>
+          <div>
+            <img src="images/icon-email.svg" alt="">
+            <p>example@fylo.com</p>
+          </div>
+        </div>
+        <div class="footer-link">
+          <div>
+            <a href="">About Us</a>
+            <a href="">Jobs</a>
+            <a href="">Press</a>
+            <a href="">Blog</a>
+          </div>
+          <div>
+            <a href="">Contact Us</a>
+            <a href="">Terms</a>
+            <a href="">Privacy</a>
+          </div>
+        </div>
+        <div class="footer-social-icon">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/dimasabimanyy">Dimas Abimanyu</a></p>
+      </div>
     </div>
   </footer>
 </body>

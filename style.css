@@ -8,7 +8,7 @@
 
 body{
     color: #ffffff;
-    background: hsl(218, 28%, 13%);
+    background: #181f2a;
     font-family: "Open Sans", sans-serif;
 }
 
@@ -16,31 +16,39 @@ h1,h2,h3,h4,h5,h6{
     font-family: "Raleway", sans-serif;
 }
 
-p{
-    font-size: 14px;
+p, a{
+    font-size: 15px;
     line-height: 22px;
-}
-
-a{
     text-decoration: none;
     color: #ffffff;
 }
 
+a:hover{
+    color: #65e2d9;
+}
+
 .btn{
-    padding: .85rem 4rem;
     border-radius: 25px;
     color: #ffffff;
     font-weight: 700;
     background: linear-gradient(-90deg,#339ecc,#65e2d9);
-    transition: .3s ease-in-out;
     border: none;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     cursor: pointer;
+    outline: none;
 }
 
 .btn:hover{
-    transform: translateY(-5px);
+    background: linear-gradient(-90deg,#65e2d9,#65e2d9);
+}
+
+.btn-intro{
+    padding: .85rem 4rem;
+}
+
+.btn-email{
+    padding: .85rem 1.25rem;
 }
 
 .container{
@@ -49,12 +57,10 @@ a{
 }
 
 header{
-    background: hsl(217, 28%, 15%);
+    background: #1c2431;
 }
 
 .header-wrapper{
-    width: 1200px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,15 +81,13 @@ header{
     text-decoration: none;
 }
 
-.nav-links li a:hover{
-    color: #339ecc;
-}
-
-
 #intro{
     width: 100%;
     position: relative;
+    min-height: 90vh;
     background: hsl(217, 28%, 15%);
+    display: flex;
+    align-items: center;
     z-index: 0;
 }
 
@@ -101,13 +105,9 @@ header{
 
 @media only screen and (max-width: 367px) {
 
-    #intro{
-        height: 300px;
-    }
-
     #intro:after{
         background: url("../images/bg-curvy-mobile.svg") no-repeat bottom center;
-        height: 200px;
+        height: 300px;
         background-size: 100%;
     }
 
@@ -115,7 +115,7 @@ header{
 
 .intro-wrapper{
     width: 600px;
-    margin: 0 auto;
+    margin:  auto;
     text-align: center;
 }
 
@@ -128,7 +128,6 @@ header{
 }
 
 .intro-text p{
-    font-size: 15px;
     margin-bottom: 2rem;
 }
 
@@ -143,9 +142,9 @@ header{
     width: 800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     column-gap: 2.5rem;
-    row-gap: 5rem;
+    row-gap: 3rem;
 }
 
 .feature-item{
@@ -173,7 +172,7 @@ header{
 .demo-wrapper{
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .demo-wrapper img{
@@ -191,7 +190,6 @@ header{
 }
 
 .demo-text p{
-    font-size: 1rem;
     margin-bottom: 1.5rem;
 }
 
@@ -224,7 +222,7 @@ header{
 
 .team-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     position: relative;
 }
@@ -276,10 +274,113 @@ header{
     z-index: 999;
 }
 
+#email h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-email{
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-email input{
+    border-radius: 25px;
+    border: none;
+    width: 450px;
+    padding: 1rem;
+    margin-right: 1rem;
+    outline: none;
+}
+
 /* Footer Section */
 
 footer{
     z-index: 0;
     background: #0B1523;
-    padding: 10rem 0 4rem;
+    padding: 14rem 0 3rem;
+}
+
+.footer-logo img{
+    width: 120px;
+    margin-bottom: 1rem;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 30% 20% 20% 20%;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer-info div{
+    display: flex;
+}
+
+.footer-logo{
+    margin-bottom: 1rem;
+}
+
+.footer-info .icon-location{
+    width: 15px;
+    height: 20px;
+    margin-right: 1rem;
+}
+
+
+.footer-contact div{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.footer-contact img{
+    width: 25px;
+    margin-right: 1rem;
+}
+
+.footer-link{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-link div{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link a{
+    margin-bottom: 1.2rem;
+}
+
+.footer-social-icon ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-social-icon li{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social-icon li:hover{
+    border: 1px solid #65e2d9;
+}
+
+.footer-social-icon li:hover a{
+    color: #65e2d9;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.copyright i{
+    color: #65e2d9;
 }
